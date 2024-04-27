@@ -95,3 +95,4 @@ function addSavedRecipe(label, url) {
     savedRecipesList.appendChild(savedRecipeItem);
     savedRecipeLink.target = "_blank";
 }
+
