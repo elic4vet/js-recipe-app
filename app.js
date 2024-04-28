@@ -15,6 +15,7 @@ inputField.addEventListener('change', handleInputChange);
 addItemBtn.addEventListener('click', addItem);
 searchRecipeBtn.addEventListener('click', searchRecipes);
 resetBtn.addEventListener('click', resetForm);
+itemList.addEventListener('click', removeShoppingItems);
 
 function handleInputChange(e) {
     inputValue = e.target.value;
@@ -28,6 +29,12 @@ function addItem() {
         li.textContent = newItemText;
         itemList.appendChild(li);
         itemInput.value = '';
+    }
+}
+
+function removeShoppingItems(e) {    
+    if (e.target.tagName === 'LI') {
+        e.target.remove();
     }
 }
 
@@ -95,4 +102,3 @@ function addSavedRecipe(label, url) {
     savedRecipesList.appendChild(savedRecipeItem);
     savedRecipeLink.target = "_blank";
 }
-
